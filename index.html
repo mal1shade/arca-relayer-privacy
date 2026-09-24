@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kebijakan Privasi - A.R.C.A Relayer</title>
+    <style>
+        :root {
+            --bg: #0f172a;
+            --card-bg: #1e293b;
+            --text: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #38bdf8;
+            --border: #334155;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            background: var(--card-bg);
+            padding: 35px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        h1 {
+            color: var(--accent);
+            margin-top: 0;
+            font-size: 1.8rem;
+            border-bottom: 2px solid var(--border);
+            padding-bottom: 12px;
+        }
+
+        h2 {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-top: 24px;
+        }
+
+        p,
+        li {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        strong {
+            color: var(--text);
+        }
+
+        .highlight-box {
+            background-color: rgba(56, 189, 248, 0.1);
+            border-left: 4px solid var(--accent);
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border);
+            font-size: 0.85rem;
+            text-align: center;
+            color: var(--text-muted);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Kebijakan Privasi</h1>
+        <p><strong>Aplikasi:</strong> A.R.C.A Relayer<br>
+            <strong>Pembaruan Terakhir:</strong> 24 September 2026
+        </p>
+
+        <div class="highlight-box">
+            <p style="margin: 0;"><strong>Prinsip Utama Privasi:</strong> A.R.C.A Relayer dirancang dengan fokus utama
+                pada privasi dan keamanan data pengguna. Aplikasi ini beroperasi secara lokal di perangkat Anda dan
+                tidak pernah mengumpulkan, menyimpan, atau menjual data pribadi Anda ke server pihak ketiga mana pun.
+            </p>
+        </div>
+
+        <h2>1. Akses Izin Perangkat dan Penggunaannya</h2>
+        <p>Untuk menjalankan fungsinya, A.R.C.A Relayer memerlukan beberapa izin khusus pada perangkat Android Anda:</p>
+        <ul>
+            <li><strong>Akses Notifikasi (Notification Listener Service):</strong> Digunakan khusus untuk membaca konten
+                pesan masuk (seperti WhatsApp atau SMS) sesuai dengan konfigurasi yang Anda tentukan. Data notifikasi
+                ini dibaca secara langsung di perangkat dan hanya digunakan untuk memicu integrasi Text-To-Speech (TTS)
+                atau meneruskan payload pesan.</li>
+            <li><strong>Text-To-Speech (TTS):</strong> Digunakan untuk membacakan isi notifikasi secara lokal di
+                perangkat Anda. Audio dikonversi secara langsung di dalam sistem perangkat tanpa direkam atau dikirim
+                keluar.</li>
+            <li><strong>Akses Jaringan (Internet):</strong> Digunakan secara opsional hanya jika Anda mengonfigurasi
+                endpoint API kustom milik Anda sendiri untuk meneruskan pesan (relay online).</li>
+        </ul>
+
+        <h2>2. Pengolahan Data dan Keamanan</h2>
+        <ul>
+            <li><strong>Pengolahan Lokal:</strong> Seluruh pemrosesan teks, notifikasi, dan sapaan suara dilakukan
+                secara 100% lokal di dalam perangkat Android Anda.</li>
+            <li><strong>Transmisi API Mandiri:</strong> Jika fitur relay online diaktifkan, data notifikasi hanya
+                dikirimkan ke alamat server API kustom yang diinput secara manual oleh Anda. Pengembang aplikasi tidak
+                menyediakan server perantara, tidak mencatat log transmisi, dan tidak memiliki akses ke endpoint yang
+                Anda gunakan.</li>
+            <li><strong>Penyimpanan Data:</strong> Aplikasi ini tidak menyimpan riwayat pesan atau notifikasi dalam
+                basis data eksternal pengembang.</li>
+        </ul>
+
+        <h2>3. Pembagian Data Pihak Ketiga</h2>
+        <p>Kami <strong>tidak menjual, menyewakan, membagikan, atau mengalihkan</strong> data pribadi, konten
+            notifikasi, atau informasi perangkat Anda kepada perusahaan, organisasi, atau individu pihak ketiga mana
+            pun.</p>
+
+        <h2>4. Penarikan Izin dan Penghapusan Data</h2>
+        <p>Anda memegang kendali penuh atas izin aplikasi ini:</p>
+        <ul>
+            <li>Anda dapat mencabut izin Akses Notifikasi kapan saja melalui menu <em>Pengaturan Perangkat &gt; Privasi
+                    &gt; Akses Notifikasi</em>.</li>
+            <li>Menghapus aplikasi (uninstall) akan membersihkan seluruh setelan dan konfigurasi lokal dari perangkat
+                Anda secara permanen.</li>
+        </ul>
+
+        <h2>5. Kontak Pengembang</h2>
+        <p>Jika Anda memiliki pertanyaan terkait kebijakan privasi ini atau penggunaan aplikasi A.R.C.A Relayer, Anda
+            dapat menghubungi pengembang melalui:</p>
+        <p>Email: <strong>akmal.maula@outlook.co.id</strong></p>
+
+        <div class="footer">
+            &copy; 2026 A.R.C.A Relayer. All rights reserved.
+        </div>
+    </div>
+</body>
+
+</html>
